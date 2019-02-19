@@ -1,0 +1,22 @@
+<tool id="read-file-count" name="Read file in blocks" version="0.1.0">
+    <requirements>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+	python '$__tool_directory__/read_file_output_number.py' "$input1" "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="txt" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="txt" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="example.txt"/>
+            <output name="output1" file="output.txt"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        TODO: Fill in help.
+    ]]></help>
+</tool>
